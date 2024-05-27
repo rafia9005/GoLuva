@@ -32,3 +32,17 @@ Follow these steps to get started with the Go Fiber Starter Template [Docs](http
 | PUT             | http://localhost:8000/users/{id} | [QUERY](https://github.com/aellopos) |
 
 </details>
+
+### Installation
+
+```bash
+git clone https://github.com/rafia9005/GoLuva
+cd GoLuva
+go mod tidy
+go run main.go
+```
+
+### configure database
+```swift
+/GoLuva/database/database.go
+```
