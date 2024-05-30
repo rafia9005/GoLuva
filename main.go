@@ -1,19 +1,32 @@
 package main
 
 import (
+    "os"
+    "fmt"
 	"github.com/gofiber/fiber/v2"
-	"github.com/rafia9005/go-api/database"
-	"github.com/rafia9005/go-api/routes"
+	"github.com/rafia9005/GoLuva/database"
+	"github.com/rafia9005/GoLuva/routes"
+    "github.com/joho/godotenv"
 )
 
 func main() {
+    // load dotnev
+    godotenv.Load()
+    
+    // create gofiber instance
 	app := fiber.New()
 
-	database.Connect()
+    var appPort = os.Getenv("APP_PORT")
+    if appPort == "" {
+        appPort = "8000"
+    }
 
-	routes.AutoMigrate()
+    if(os.Getenv("APP_DATABASE") != ""){
+        database.Connect()
+        routes.AutoMigrate()
+    }
 
 	routes.SetupRouter(app)
 
-	app.Listen(":8000")
+    app.Listen(fmt.Sprintf(":%s", appPort))
 }

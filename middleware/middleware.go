@@ -4,7 +4,7 @@ import (
 	"net/http"
 
 	"github.com/gofiber/fiber/v2"
-	"github.com/rafia9005/go-api/utils"
+	"github.com/rafia9005/GoLuva/utils"
 	"golang.org/x/crypto/bcrypt"
 )
 

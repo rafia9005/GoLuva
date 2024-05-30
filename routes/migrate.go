@@ -1,7 +1,7 @@
 package routes
 
 import (
-	"github.com/rafia9005/go-api/database"
+	"github.com/rafia9005/GoLuva/database"
 )
 
 func RunMigrate(dataModel interface{}) {
