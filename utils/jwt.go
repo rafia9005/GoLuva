@@ -1,12 +1,13 @@
 package utils
 
 import (
+    "os"
 	"fmt"
 
 	"github.com/dgrijalva/jwt-go"
 )
 
-var SecretKey = "n3^|e{jJ,|UmsT(ch42^yl8x^=7#zp}q"
+var SecretKey string
 
 func GenerateToken(claims *jwt.MapClaims) (string, error) {
 	token := jwt.NewWithClaims(jwt.SigningMethodHS256, claims)
@@ -46,4 +47,11 @@ func DecodeToken(tokenString string) (jwt.MapClaims, error) {
 	}
 
 	return nil, fmt.Errorf("Invalid Token")
+}
+
+func init(){
+    SecretKey = os.Getenv("SECRET_KEY")
+    if(SecretKey == ""){
+        SecretKey = "n3^|e{jJ,|UmsT(ch42^yl8x^=7#zp}q"
+    }
 }

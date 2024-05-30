@@ -6,11 +6,11 @@ import (
 	"github.com/dgrijalva/jwt-go"
 	"github.com/go-playground/validator/v10"
 	"github.com/gofiber/fiber/v2"
-	"github.com/rafia9005/go-api/database"
-	"github.com/rafia9005/go-api/middleware"
-	"github.com/rafia9005/go-api/model/entity"
-	"github.com/rafia9005/go-api/model/request"
-	"github.com/rafia9005/go-api/utils"
+	"github.com/rafia9005/GoLuva/database"
+	"github.com/rafia9005/GoLuva/middleware"
+	"github.com/rafia9005/GoLuva/model/entity"
+	"github.com/rafia9005/GoLuva/model/request"
+	"github.com/rafia9005/GoLuva/utils"
 )
 
 func Login(c *fiber.Ctx) error {

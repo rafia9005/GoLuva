@@ -2,10 +2,10 @@ package routes
 
 import (
 	"github.com/gofiber/fiber/v2"
-	"github.com/rafia9005/go-api/handler"
-	auth "github.com/rafia9005/go-api/handler/Auth"
-	"github.com/rafia9005/go-api/middleware"
-	"github.com/rafia9005/go-api/model/entity"
+	"github.com/rafia9005/GoLuva/handler"
+	auth "github.com/rafia9005/GoLuva/handler/Auth"
+	"github.com/rafia9005/GoLuva/middleware"
+	"github.com/rafia9005/GoLuva/model/entity"
 )
 
 var Admin = middleware.AdminRole

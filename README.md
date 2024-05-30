@@ -42,7 +42,10 @@ go mod tidy
 go run main.go
 ```
 
-### configure database
-```swift
-/GoLuva/database/database.go
+### Configuration on .env
+
+```env
+APP_DATABASE = "mysql://username:password@tcp(localhost:3306)/database_name?charset=utf8mb4&parseTime=True&loc=Local"
+APP_PORT = "3000"
+APP_SECRET = "your-very-secure-secreet"
 ```
